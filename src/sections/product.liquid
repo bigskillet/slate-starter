@@ -69,6 +69,10 @@
           {% endif %}
         </div>
       {% endfor %}
+    {% else %}
+      {% for variant in product.variants %}
+        <input type="hidden" name="id" value="{{ variant.id }}">
+      {% endfor %}
     {% endunless %}
 
     <noscript>
