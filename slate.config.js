@@ -1,7 +1,5 @@
-/* eslint-disable */
-
 // Configuration file for all things Slate.
-// For more information, visit https://github.com/Shopify/slate/wiki/Slate-Configuration
+// https://github.com/Shopify/slate/wiki/Slate-Configuration
 
 const path = require('path');
 
@@ -15,4 +13,21 @@ module.exports = {
       },
     },
   },
+  'webpack.postcss.plugins': [
+    require('tailwindcss')({
+      theme: {
+        extend: {}
+      },
+      variants: {},
+      plugins: []
+    }),
+    ...process.env.NODE_ENV === 'production'
+      ? [
+        require('cssnano'),
+        require('@fullhuman/postcss-purgecss')({
+          content: ['./src/**/*.html'],
+          defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+        })
+      ] : []
+  ]
 };
