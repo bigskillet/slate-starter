@@ -3,9 +3,9 @@
 
 const path = require('path');
 
-const purgecss = require('@fullhuman/postcss-purgecss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const purgecss = require('@fullhuman/postcss-purgecss');
 const tailwindcss = require('tailwindcss');
 
 module.exports = {
