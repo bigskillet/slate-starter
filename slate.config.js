@@ -33,7 +33,9 @@ module.exports = {
       plugins.push(
         purgecss({
           content: ['./src/**/*.liquid'],
-          defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+          defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+          whitelistPatterns: [],
+          whitelist: []
         }),
         cssnano({
           preset: ['default', {

@@ -1,4 +1,9 @@
 {
+  "name": "starter-theme",
+  "version": "1.0.0-alpha.1",
+  "private": true,
+  "author": "Shopify Inc.",
+  "license": "MIT",
   "scripts": {
     "start": "slate-tools start",
     "watch": "slate-tools start --skipFirstDeploy",
