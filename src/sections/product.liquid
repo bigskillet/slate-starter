@@ -35,20 +35,20 @@
   <h1>{{ product.title }}</h1>
   <p>{{ product.vendor }}</p>
 
-
   {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %}
-    {% unless product.has_only_default_variant %}
+    {% if product.has_only_default_variant %}
+      <input type="hidden" name="id" value="{{ current_variant.id }}">
+    {% else %}
       {% for option in product.options_with_values %}
-        <div class="js">
-
-          {% if forloop.index0 > 0 %}
-
+        <div class="js js__dependant">
+        {% if forloop.index0 > 0 %}
             {% for value in option.values %}
+            index:{{forloop.index0}}
               <input type="radio" id="Option{{ option.position }}-{{ value }}" name="options[{{ option.name }}]" value="{{ value }}"{% if option.selected_value == value %} checked{% endif %}>
               <label for="Option{{ option.position }}-{{ value }}">{{ value }}</label>
             {% endfor %}
 
-          {% else %}
+          {% else %} 
 
             <label for="Option{{ option.position }}">
               {{ option.name }}
@@ -65,15 +65,10 @@
                 </option>
               {% endfor %}
             </select>
-
           {% endif %}
         </div>
       {% endfor %}
-    {% else %}
-      {% for variant in product.variants %}
-        <input type="hidden" name="id" value="{{ variant.id }}">
-      {% endfor %}
-    {% endunless %}
+    {% endif %}
 
     <noscript>
       <select name="id">
