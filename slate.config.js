@@ -16,17 +16,15 @@ module.exports = {
   },
   'webpack.postcss.plugins': (config) => {
     const plugins = [
-      require('tailwindcss'),
+      require('tailwindcss')({
+        purge: {
+          content: ['./src/**/*.html']
+        }  
+      }),
       require('autoprefixer')
     ];
     if (process.env.NODE_ENV === 'production') {
       plugins.push(
-        require('@fullhuman/postcss-purgecss')({
-          content: ['./src/**/*.liquid'],
-          defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-          whitelistPatterns: [],
-          whitelist: ['template-cart']
-        }),
         require('cssnano')({
           preset: ['default', {
             discardComments: {
