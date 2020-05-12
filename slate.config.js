@@ -18,7 +18,7 @@ module.exports = {
     const plugins = [
       require('tailwindcss')({
         purge: {
-          content: ['./src/**/*.html']
+          content: ['./src/**/*.liquid']
         }  
       }),
       require('autoprefixer')
