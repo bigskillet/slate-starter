@@ -11,11 +11,10 @@ node_modules
 dist
 upload
 deploy.log
-config/shopify.yml
+config.yml
 npm-debug.log
 .env
 .env.*
-
 
 # Compiled source #
 ###################
