@@ -28,7 +28,10 @@ module.exports = {
             display: []
           },
           colors: {}
-        }
+        },
+        plugins: [
+          require('@tailwindcss/aspect-ratio')
+        ]
       }),
       require('autoprefixer')
     ];
