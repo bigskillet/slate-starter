@@ -33,6 +33,9 @@ module.exports = {
           require('@tailwindcss/aspect-ratio')
         ]
       }),
+      require('postcss-pxtorem')({
+        propList: ['*']
+      }),
       require('autoprefixer')
     ];
     if (process.env.NODE_ENV === 'production') {

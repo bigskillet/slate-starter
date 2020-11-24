@@ -19,6 +19,7 @@
     "autoprefixer": "^9.8.6",
     "babel-preset-shopify": "^21.0.0",
     "eslint-plugin-shopify": "^35.1.0",
+    "postcss-pxtorem": "^5.1.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-shopify": "^7.4.0"
   },
