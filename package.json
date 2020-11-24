@@ -36,7 +36,7 @@
     "lazysizes": "^5.2.0",
     "lodash-es": "^4.17.4",
     "qrcode": "^1.4.4",
-    "tailwindcss": "1.4.6"
+    "tailwindcss": "^1.9.6"
   },
   "scripts": {
     "start": "slate-tools start",

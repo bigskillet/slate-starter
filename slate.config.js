@@ -10,16 +10,25 @@ module.exports = {
     resolve: {
       alias: {
         jquery: path.resolve('./node_modules/jquery'),
-        'lodash-es': path.resolve('./node_modules/lodash-es'),
-      },
-    },
+        'lodash-es': path.resolve('./node_modules/lodash-es')
+      }
+    }
   },
   'webpack.postcss.plugins': (config) => {
     const plugins = [
       require('tailwindcss')({
-        purge: {
-          content: ['./src/**/*.liquid']
-        }  
+        future: {
+          removeDeprecatedGapUtilities: true,
+          purgeLayersByDefault: true
+        },
+        purge: ['./src/**/*.liquid'],
+        theme: {
+          fontFamily: {
+            body: ['sans-serif'],
+            display: []
+          },
+          colors: {}
+        }
       }),
       require('autoprefixer')
     ];
