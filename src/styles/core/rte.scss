@@ -14,9 +14,7 @@
     margin: 0 0 ($grid-gutter / 2) $grid-gutter;
   }
 
-  strong {
-    font-weight: $font-body-bold-weight;
-  }
+  strong {}
 }
 
 // Allow table to scroll for tables in the RTE since we don't know
