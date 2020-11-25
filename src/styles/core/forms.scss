@@ -19,12 +19,12 @@ textarea,
 select {
   font-size: 1.6rem;
   max-width: 100%;
-  border: 1px solid $color-border;
+  border: 1px solid #000;
   border-radius: 0;
 
   &[disabled] {
-    border-color: $color-disabled-border;
-    background-color: $color-disabled;
+    border-color: #000;
+    background-color: #000;
     cursor: default;
   }
 }
@@ -50,7 +50,7 @@ option {
 }
 
 .input-error {
-  border-color: $color-error;
-  background-color: $color-error-bg;
+  border-color: #ff6d6d;
+  background-color: #fff;
   color: #000;
 }
