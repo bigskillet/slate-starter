@@ -45,12 +45,12 @@ select::-ms-expand {
 
 // Force option color (affects IE only)
 option {
-  background-color: $color-body;
-  color: $color-body-text;
+  background-color: #fff;
+  color: #000;
 }
 
 .input-error {
   border-color: $color-error;
   background-color: $color-error-bg;
-  color: $color-body-text;
+  color: #000;
 }
