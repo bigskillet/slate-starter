@@ -1,7 +1,7 @@
 .collection-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: $grid-max-width;
+  //max-width: 1180px;
 }
 
 .collection-list-item {
@@ -11,7 +11,7 @@
 }
 
 .collection-list__image {
-  min-width: 320px;
+  //min-width: 320px;
 }
 
 .collection-list__title {

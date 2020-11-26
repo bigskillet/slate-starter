@@ -22,7 +22,7 @@
     td {
       display: block;
       margin: 0;
-      padding: $grid-gutter / 2;
+      padding: 30px / 2;
       text-align: right;
     }
 
@@ -39,14 +39,14 @@
   tfoot > .responsive-table-row:first-child {
     position: relative;
     margin-top: 10px;
-    padding-top: $grid-gutter / 2;
+    padding-top: 30px / 2;
 
     &::after {
       content: '';
       position: absolute;
       top: 0;
-      right: $grid-gutter / 2;
-      left: $grid-gutter / 2;
+      right: 30px / 2;
+      left: 30px / 2;
       display: block;
       border-bottom: 1px solid #000;
     }
