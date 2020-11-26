@@ -4,7 +4,6 @@
 const path = require('path');
 
 module.exports = {
-  'cssVarLoader.liquidPath': ['src/snippets/css-variables.liquid'],
   'webpack.babel.enable': false,
   'webpack.extend': {
     resolve: {
