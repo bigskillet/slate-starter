@@ -1,4 +1,4 @@
-@include media-query($small) {
+@media (min-width: 640px) {
   .responsive-table {
     width: 100%;
 
