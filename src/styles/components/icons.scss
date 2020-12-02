@@ -35,16 +35,6 @@ symbol {
   }
 }
 
-// A generic way to visually hide content while
-// remaining accessible to screen readers (h5bp.com)
-.icon-fallback-text {
-  @include visually-hidden;
-
-  .no-svg & {
-    @include visually-shown(static);
-  }
-}
-
 // Payment icons
 .payment-icons {
   user-select: none;

@@ -1,22 +1,5 @@
-.visually-hidden {
-  @include visually-hidden;
-}
-
 .js-focus-hidden:focus {
   outline: none;
-}
-
-.label-hidden {
-  @include visually-hidden;
-
-  // No placeholders, so force show labels
-  .no-placeholder & {
-    @include visually-shown;
-  }
-}
-
-.visually-shown {
-  @include visually-shown;
 }
 
 // Only show when JS is not supported
@@ -49,20 +32,4 @@
   html.supports-no-cookies & {
     display: none;
   }
-}
-
-// Skip to content button
-// Overrides .visually-hidden when focused
-.skip-link:focus {
-  @include visually-shown(absolute);
-  z-index: 10000;
-  padding: 30px / 2;
-  background-color: #fff;
-  color: #000;
-  transition: none;
-}
-
-.hide {
-  /* stylelint-disable declaration-no-important */
-  display: none !important;
 }
