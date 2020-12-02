@@ -1,23 +1,4 @@
 /**
- * Forces an element to self-clear its children
- *
- * Usage:
- * .selector {
- *   @include clearfix;
- * }
- */
-@mixin clearfix() {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  // stylelint-disable-next-line
-  *zoom: 1;
-}
-
-/**
  * Hide element but make it accessible to screen readers
  *
  * Usage:
