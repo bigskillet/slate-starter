@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-// Tools
-@import './tools/mixins';
-@import './tools/functions';
-
 // Core
 @import './core/forms';
 @import './core/helpers';
