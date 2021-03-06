@@ -33,10 +33,6 @@
       <p>{{ collection.title | default: default_label }}</p>
     </a>
   {% endfor %}
-
-  {% if section.blocks.size == 0 %}
-    {% include 'no-blocks' %}
-  {% endif %}
 </section>
 
 {% schema %}
